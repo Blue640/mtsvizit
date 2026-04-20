@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Trolleybus Simulator | Official Fan Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Micro-Trolleybus Simulator</h1>
+    <p>Маленький мир больших электрических поездок</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('home')">Главная</a>
+    <a href="#" onclick="showSection('gallery-sec')">Галерея</a>
+    <a href="#" onclick="showSection('staff')">Администрация</a>
+    <a href="#" class="admin-link" onclick="loginAdmin()">Админка</a>
+</nav>
+
+<div class="container">
+    <section id="home">
+        <h2>О проекте</h2>
+        <div id="main-text-content">
+            <p><strong>Micro-Trolleybus Simulator</strong> — симулятор, посвященный детальному управлению троллейбусами. Игроки ценят его за проработку электрических систем и физику контактной сети.</p>
+        </div>
+    </section>
+
+    <section id="gallery-sec" style="display:none;">
+        <h2>Галерея</h2>
+        <div class="gallery" id="image-gallery">
+            <img src="https://via.placeholder.com/400x300?text=MTS+Screen+1" alt="Screenshot">
+        </div>
+    </section>
+
+    <section id="staff" style="display:none;">
+        <h2>Администрация Клуба</h2>
+        <ul id="admin-list">
+            <li><strong>BlueDev</strong> — Разработчик сайта</li>
+        </ul>
+    </section>
+
+    <div id="admin-panel" class="admin-panel" style="display:none;">
+        <h3>🛠 Панель администратора</h3>
+        <p><small>Изменения сохраняются локально в вашем браузере.</small></p>
+        
+        <label>Текст главной страницы:</label>
+        <textarea id="edit-text" rows="5"></textarea>
+        
+        <label>URL нового фото:</label>
+        <input type="text" id="edit-img" placeholder="https://example.com/photo.jpg">
+
+        <label>Список администрации (HTML):</label>
+        <textarea id="edit-staff" rows="5"></textarea>
+        
+        <button class="btn save" onclick="saveChanges()">Сохранить</button>
+        <button class="btn exit" onclick="logout()">Выйти</button>
+    </div>
+</div>
+
+<footer>
+    Сделано <strong>BlueDev</strong> | <a href="https://t.me/bluedev_off" target="_blank">t.me/bluedev_off</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
